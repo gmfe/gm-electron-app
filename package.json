@@ -1,0 +1,46 @@
+{
+  "name": "gm-electron-app",
+  "version": "1.0.0",
+  "description": "ElectronApp",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "postinstall": "electron-builder install-app-deps",
+    "dist": "electron-builder --win"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:gmfe/gm-electron-app.git"
+  },
+  "keywords": [],
+  "author": "深圳市观麦网络科技有限公司",
+  "license": "ISC",
+  "build": {
+    "appId": "cn.guanmai.electron",
+    "productName": "ElectronApp",
+    "copyright": "Copyright © 2020 gm",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable"
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "serialport": "^9.0.4"
+  },
+  "devDependencies": {
+    "electron": "^11.1.1",
+    "electron-builder": "^22.9.1"
+  }
+}
