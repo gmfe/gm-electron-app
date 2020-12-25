@@ -676,10 +676,10 @@ electron-publish@22.9.1:
     lazy-val "^1.0.4"
     mime "^2.4.6"
 
-electron@^11.1.1:
-  version "11.1.1"
-  resolved "https://registry.npm.taobao.org/electron/download/electron-11.1.1.tgz?cache=0&sync_timestamp=1608583696623&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Felectron%2Fdownload%2Felectron-11.1.1.tgz#188f036f8282798398dca9513e9bb3b10213e3aa"
-  integrity sha1-GI8Db4KCeYOY3KlRPpuzsQIT46o=
+electron@^10.1.3:
+  version "10.2.0"
+  resolved "https://registry.npm.taobao.org/electron/download/electron-10.2.0.tgz?cache=0&sync_timestamp=1608583696623&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Felectron%2Fdownload%2Felectron-10.2.0.tgz#4b00f0907b28aca4b93661bb53ce9a4f8ad32201"
+  integrity sha1-SwDwkHsorKS5NmG7U86aT4rTIgE=
   dependencies:
     "@electron/get" "^1.0.1"
     "@types/node" "^12.0.12"
@@ -1114,14 +1114,14 @@ json5@^2.1.2:
 
 jsonfile@^4.0.0:
   version "4.0.0"
-  resolved "https://registry.npm.taobao.org/jsonfile/download/jsonfile-4.0.0.tgz?cache=0&sync_timestamp=1604161844511&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fjsonfile%2Fdownload%2Fjsonfile-4.0.0.tgz#8771aae0799b64076b76640fca058f9c10e33ecb"
+  resolved "https://registry.npm.taobao.org/jsonfile/download/jsonfile-4.0.0.tgz?cache=0&sync_timestamp=1604161797011&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fjsonfile%2Fdownload%2Fjsonfile-4.0.0.tgz#8771aae0799b64076b76640fca058f9c10e33ecb"
   integrity sha1-h3Gq4HmbZAdrdmQPygWPnBDjPss=
   optionalDependencies:
     graceful-fs "^4.1.6"
 
 jsonfile@^6.0.1:
   version "6.1.0"
-  resolved "https://registry.npm.taobao.org/jsonfile/download/jsonfile-6.1.0.tgz?cache=0&sync_timestamp=1604161844511&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fjsonfile%2Fdownload%2Fjsonfile-6.1.0.tgz#bc55b2634793c679ec6403094eb13698a6ec0aae"
+  resolved "https://registry.npm.taobao.org/jsonfile/download/jsonfile-6.1.0.tgz?cache=0&sync_timestamp=1604161797011&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fjsonfile%2Fdownload%2Fjsonfile-6.1.0.tgz#bc55b2634793c679ec6403094eb13698a6ec0aae"
   integrity sha1-vFWyY0eTxnnsZAMJTrE2mKbsCq4=
   dependencies:
     universalify "^2.0.0"
@@ -1484,7 +1484,7 @@ responselike@^1.0.2:
 
 roarr@^2.15.3:
   version "2.15.4"
-  resolved "https://registry.npm.taobao.org/roarr/download/roarr-2.15.4.tgz?cache=0&sync_timestamp=1600094609360&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Froarr%2Fdownload%2Froarr-2.15.4.tgz#f5fe795b7b838ccfe35dc608e0282b9eba2e7afd"
+  resolved "https://registry.npm.taobao.org/roarr/download/roarr-2.15.4.tgz?cache=0&sync_timestamp=1608864041031&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Froarr%2Fdownload%2Froarr-2.15.4.tgz#f5fe795b7b838ccfe35dc608e0282b9eba2e7afd"
   integrity sha1-9f55W3uDjM/jXcYI4Cgrnrouev0=
   dependencies:
     boolean "^3.0.1"
