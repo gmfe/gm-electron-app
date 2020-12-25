@@ -5,14 +5,12 @@
   * [x] 绿色版
 - [x] Debug 模式
 - [ ] 自动更新 @wq
-- [ ] http
+- [x] http
 - [ ] print.html版本 and 通信
 - [ ] 打印 @wq
 
-todo 
-- 串口数据优化
-- 解析串口用 serialport parsers 
-- 自动更新
+todo
+- [ ] 解析串口用 serialport parsers
 
 # 开发
 
