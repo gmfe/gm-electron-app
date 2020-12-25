@@ -21,6 +21,15 @@
       </script>
       .
     </p>
+
+    <button onclick="print();">打印</button>
+
+    <script>
+        const { ipcRenderer } = window.require('electron')
+        function print() {
+            ipcRenderer.invoke('print', 'params')
+        }
+    </script>
     <script src="./render/index.js"></script>
   </body>
 </html>
