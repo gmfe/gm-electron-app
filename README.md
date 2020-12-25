@@ -9,4 +9,11 @@
 - [ ] print.html
 - [ ] 打印 @wq
 
-todo • 解析串口用 serialport parsers • 32位 • 自动更新
+todo 
+- 串口数据优化
+- 解析串口用 serialport parsers 
+- 自动更新
+
+# 开发
+
+`ELECTRON_MIRROR="https://npm.taobao.org/mirrors/electron/" yarn`
