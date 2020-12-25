@@ -3,10 +3,10 @@
 - [x] windows打包
   * [x] x86
   * [x] 绿色版
-- [ ] Debug 模式
+- [x] Debug 模式
 - [ ] 自动更新 @wq
 - [ ] http
-- [ ] print.html
+- [ ] print.html版本 and 通信
 - [ ] 打印 @wq
 
 todo 
