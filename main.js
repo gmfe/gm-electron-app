@@ -17,7 +17,9 @@ function createWindow() {
 
   // 根据配置打开开发工具
   // if (config.isOpenDevTools) {
-  win.webContents.openDevTools()
+  win.webContents.openDevTools({
+    mode: 'detach',
+  })
   // }
 
   // win.on('closed', function () {
@@ -26,20 +28,21 @@ function createWindow() {
   // })
 }
 
-function createPrintWindow () {
-  if(!printWindow) {
+function createPrintWindow() {
+  if (!printWindow) {
     printWindow = new BrowserWindow({
       width: 300,
       height: 300,
       webPreferences: {
         nodeIntegration: true,
-        enableRemoteModule: true
-      }
+        enableRemoteModule: true,
+      },
     })
 
     printWindow.loadFile('label.html')
-    printWindow.webContents.openDevTools()
-
+    printWindow.webContents.openDevTools({
+      mode: 'detach',
+    })
   }
 }
 
