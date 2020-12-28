@@ -1,12 +1,16 @@
-const { app, BrowserWindow, ipcMain } = require('electron')
+const { app, BrowserWindow, ipcMain, Menu } = require('electron')
 const config = require('./config')
 
 let printWindow = null
 
 function createWindow() {
-  const win = new BrowserWindow({
-    width: 1500,
+  // 隐藏菜单
+  Menu.setApplicationMenu(null)
+
+  let win = new BrowserWindow({
+    width: 1200,
     height: 1000,
+    center: true,
     webPreferences: {
       nodeIntegration: true,
       enableRemoteModule: true,
@@ -16,16 +20,17 @@ function createWindow() {
   win.loadURL(config.mainLoadURL)
 
   // 根据配置打开开发工具
-  // if (config.isOpenDevTools) {
-  win.webContents.openDevTools({
-    mode: 'detach',
-  })
-  // }
+  if (config.isOpenDevTools) {
+    win.webContents.openDevTools({
+      mode: 'detach',
+    })
+  }
 
-  // win.on('closed', function () {
-  //   mainWindow = null
-  //   app.quit()
-  // })
+  // 主窗口关闭就退出程序
+  win.on('closed', function () {
+    win = null
+    app.quit()
+  })
 }
 
 function createPrintWindow() {
@@ -37,12 +42,18 @@ function createPrintWindow() {
         nodeIntegration: true,
         enableRemoteModule: true,
       },
+      // 默认不显示，在后台
+      show: config.showPrint,
     })
 
-    printWindow.loadFile('label.html')
-    printWindow.webContents.openDevTools({
-      mode: 'detach',
-    })
+    printWindow.loadURL(config.printLoadURL)
+
+    // 根据配置打开开发工具
+    if (config.isOpenPrintDevTools) {
+      printWindow.webContents.openDevTools({
+        mode: 'detach',
+      })
+    }
   }
 }
 
@@ -73,5 +84,3 @@ app.on('activate', () => {
     createPrintWindow()
   }
 })
-
-console.log(1)

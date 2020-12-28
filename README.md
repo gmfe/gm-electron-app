@@ -11,7 +11,7 @@
 
 todo
 - [ ] 解析串口用 serialport parsers
-  * [ ] 无限量
+  * [x] 无限量
   * [ ] 制衡
 
 # 开发
