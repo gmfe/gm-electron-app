@@ -4,6 +4,7 @@
   "description": "ElectronApp",
   "main": "main.js",
   "scripts": {
+    "env": "cross-env ELECTRON_MIRROR=\"https://npm.taobao.org/mirrors/electron/\" yarn",
     "start": "electron .",
     "postinstall": "electron-builder install-app-deps",
     "dist": "electron-builder --win"
@@ -46,6 +47,7 @@
     "serialport": "^9.0.4"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "electron": "^10.1.3",
     "electron-builder": "^22.9.1"
   }
