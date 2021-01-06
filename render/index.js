@@ -3,4 +3,5 @@ window.__electron_weight = ''
 
 require('./render/serialport')
 require('./render/server')
+require('./render/check_update')
 // require('./render/menu')

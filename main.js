@@ -1,34 +1,38 @@
 const { app, BrowserWindow, ipcMain, Menu } = require('electron')
 const config = require('./config')
+const path = require('path')
+const handleUpdate = require('./updata')
 
 let printWindow = null
+let mainWindow = null
 
 function createWindow() {
   // 隐藏菜单
   Menu.setApplicationMenu(null)
 
-  let win = new BrowserWindow({
+  mainWindow = new BrowserWindow({
     width: 1200,
     height: 1000,
     center: true,
     webPreferences: {
+      preload: path.join(__dirname, 'preload.js'),
       nodeIntegration: true,
       enableRemoteModule: true,
     },
   })
 
-  win.loadURL(config.mainLoadURL)
+  mainWindow.loadURL(config.mainLoadURL)
 
   // 根据配置打开开发工具
   if (config.isOpenDevTools) {
-    win.webContents.openDevTools({
+    mainWindow.webContents.openDevTools({
       mode: 'detach',
     })
   }
 
   // 主窗口关闭就退出程序
-  win.on('closed', function () {
-    win = null
+  mainWindow.on('closed', function () {
+    mainWindow = null
     app.quit()
   })
 }
@@ -57,6 +61,10 @@ function createPrintWindow() {
   }
 }
 
+function sendMessage(msgObj) {
+  mainWindow.webContents.send('message', msgObj)
+}
+
 // 接受渲染进程对 print 事件
 ipcMain.handle('print', (event, payload) => {
   // 像打印窗口发送 print 事件
@@ -67,6 +75,7 @@ ipcMain.handle('print', (event, payload) => {
 app.whenReady().then(() => {
   createWindow()
   createPrintWindow()
+  handleUpdate(sendMessage)
 })
 
 // https://github.com/electron/electron/issues/18397
