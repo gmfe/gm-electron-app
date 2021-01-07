@@ -10,7 +10,8 @@ function handleUpdate(dispatchMsg) {
     canUpdateNow: { status: 3, msg: '新版本已下载完毕，是否现在安装' },
   }
 
-  autoUpdater.setFeedURL('http://172.16.2.191:2333/Desktop')
+  // 部署了安装文件和 latest.yml 的地址
+  autoUpdater.setFeedURL('http://localhost:2333/Desktop')
 
   autoUpdater.on('error', () => {
     dispatchMsg(msg.error)
